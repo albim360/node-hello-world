@@ -11,23 +11,23 @@ const port = +process.env.PORT || 3000;
 // Creo la costante per la visualizzazione del server
 const server = http.createServer(function (req, res) {
     // Lo definisco come contenuto HTML
-    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.writeHead(200, {'Content-Type': 'text/html; charset=UTF-8'});
 
-    // Definisco le parole random presenti nel .env come json
-    const paroleRandom = JSON.parse(process.env.RANDOMTEXT);
-    console.log(paroleRandom);
-    // Prendo l'index delle parole random
-    const randomIndex = Math.floor(Math.random() * paroleRandom.length);
+    // Definisco le frasi random presenti nel .env come json
+    const frasiRandom = JSON.parse(process.env.RANDOMTEXT);
+    console.log(frasiRandom);
+    // Prendo l'index delle frasi random
+    const randomIndex = Math.floor(Math.random() * frasiRandom.length);
 
-    // Seleziono una parola casuale dall'array
-    const randomText = paroleRandom[randomIndex];
-    // Stampo in pagina la parola casuale
-    res.end(`<h1> Parola random </h1> <br> <h2> ${randomText} </h2>`);
+    // Seleziono una frase casuale dall'array
+    const randomText = frasiRandom[randomIndex];
+    // Stampo in pagina la frase casuale
+    res.end(`<h1>Frase Motivazionale</h1> <br> <h2>${randomText}</h2>`);
 
 
 });
 // Starto il server
 server.listen(port, function() {
-    //Faccio sì che nel terminale esca direttamente il link clickabile per aprire il sito 
+    // Faccio sì che nel terminale esca direttamente il link clickabile per aprire il sito 
     console.log("Server is running on http://localhost:" + port)
-}); 
+});

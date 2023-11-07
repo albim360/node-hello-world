@@ -1,9 +1,10 @@
 const http = require("http");
 
+// Integro e configuro dotenv
 const dotenv = require("dotenv");
 dotenv.config();
 
-
+// Definisco la porta presente nell'env, o la porta 3000
 const port = +process.env.PORT || 3000;
 
 // Creo la costante per la visualizzazione del server

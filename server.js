@@ -20,7 +20,7 @@ const server = http.createServer(function (req, res) {
     // Seleziono una parola casuale dall'array
     const randomText = paroleRandom[randomIndex];
     // Stampo in pagina la parola casuale
-    res.end(` <h1> ${randomText} </h1>`);
+    res.end(`<h1> Parola random </h1> <br> <h2> ${randomText} </h2>`);
 
 
 });

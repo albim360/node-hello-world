@@ -1,3 +1,4 @@
+// Importo il modulo HTTP per creare un server
 const http = require("http");
 
 // Integro e configuro dotenv
